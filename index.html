@@ -3,221 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guía de Fotocopias - Epson ET-2870</title>
+    <title>Guía Paso a Paso - Fotocopias Epson ET-2870</title>
     <style>
-        :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
-            --bg: #f8fafc;
-            --card-bg: #ffffff;
-            --text: #1e293b;
-            --text-light: #64748b;
-            --border: #e2e8f0;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f1f5f9;
+            color: #0f172a;
+            line-height: 1.5;
             padding: 16px;
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
         }
-
-        header {
+        .header {
+            background: linear-gradient(135deg, #1d4ed8, #2563eb);
+            color: white;
+            padding: 24px 20px;
+            border-radius: 20px;
             text-align: center;
-            padding: 20px 0;
-            border-bottom: 2px dashed var(--border);
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-
-        header h1 {
+        .header h1 {
             font-size: 1.8rem;
-            color: var(--primary-dark);
-            margin-bottom: 4px;
+            font-weight: 800;
+            margin-bottom: 6px;
         }
-
-        header p {
-            color: var(--text-light);
-            font-size: 1rem;
-            font-weight: bold;
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
         }
-
         .step-card {
-            background: var(--card-bg);
-            border-radius: 16px;
+            background: white;
+            border-radius: 18px;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03);
-            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
         }
-
-        .step-number {
-            display: inline-flex;
+        .step-header {
+            display: flex;
             align-items: center;
-            justify-content: center;
-            background: var(--primary);
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .step-number {
+            background-color: #2563eb;
             color: white;
             width: 36px;
             height: 36px;
             border-radius: 50%;
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
-
-        .step-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: var(--text);
-            margin-bottom: 8px;
-        }
-
-        .step-description {
-            font-size: 1.1rem;
-            color: var(--text);
-            margin-bottom: 16px;
-        }
-
-        .illustration {
-            width: 100%;
-            background: #f1f5f9;
-            border-radius: 12px;
-            padding: 16px;
             display: flex;
+            align-items: center;
             justify-content: center;
-            align-items: center;
-        }
-
-        .btn-box {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 10px;
-        }
-
-        .btn-option {
-            display: flex;
-            align-items: center;
-            padding: 14px;
-            border-radius: 12px;
-            border: 2px solid var(--border);
-            background: #fafafa;
-        }
-
-        .btn-option.bw {
-            border-color: #64748b;
-        }
-
-        .btn-option.color {
-            border-color: #3b82f6;
-            background: #eff6ff;
-        }
-
-        .btn-icon {
-            font-size: 2rem;
-            margin-right: 12px;
-        }
-
-        .btn-text {
-            font-size: 1.1rem;
             font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
         }
-
-        .alert-box {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-            border-radius: 12px;
-            padding: 16px;
-            color: #991b1b;
-            font-size: 1rem;
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3a8a;
+        }
+        .step-text {
+            font-size: 1.1rem;
+            color: #334155;
+            margin-bottom: 14px;
+        }
+        .step-text strong {
+            color: #0f172a;
+        }
+        .step-img {
+            width: 100%;
+            border-radius: 14px;
+            border: 1px solid #cbd5e1;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .icon-power-box {
+            text-align: center;
+            background-color: #eff6ff;
+            border: 2px solid #bfdbfe;
+            border-radius: 14px;
+            padding: 20px;
             margin-top: 10px;
         }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            color: var(--text-light);
-            font-size: 0.9rem;
+        .icon-power {
+            font-size: 4rem;
+            color: #2563eb;
+            display: block;
+            margin-bottom: 6px;
+        }
+        .tip-box {
+            background-color: #fefce8;
+            border-left: 5px solid #eab308;
+            padding: 14px;
+            border-radius: 10px;
+            margin-top: 12px;
+            font-size: 1rem;
+            color: #713f12;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>🖨️ Guía de Fotocopias</h1>
+    <div class="header">
+        <h1>🖨️ Cómo hacer fotocopias</h1>
         <p>Epson EcoTank ET-2870</p>
-    </header>
+    </div>
 
     <!-- PASO 1 -->
     <div class="step-card">
-        <div class="step-number">1</div>
-        <div class="step-title">Coloca el documento</div>
-        <div class="step-description">
-            Levanta la tapa. Pon la hoja <strong>boca abajo</strong> arrimada a la <strong>esquina superior izquierda</strong> (donde está la flechita).
+        <div class="step-header">
+            <div class="step-number">1</div>
+            <div class="step-title">Colocar el papel</div>
         </div>
-        <div class="illustration">
-            <svg width="200" height="130" viewBox="0 0 200 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Impresora -->
-                <rect x="20" y="50" width="160" height="70" rx="8" fill="#334155"/>
-                <rect x="30" y="30" width="140" height="20" fill="#94A3B8"/>
-                <!-- Flecha guía -->
-                <path d="M35 58 L45 58 L40 65 Z" fill="#EF4444"/>
-                <!-- Hoja de papel -->
-                <rect x="35" y="15" width="70" height="90" rx="2" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2" transform="rotate(-10 35 15)"/>
-                <line x1="45" y1="30" x2="85" y2="22" stroke="#94A3B8" stroke-width="2"/>
-                <line x1="45" y1="40" x2="85" y2="32" stroke="#94A3B8" stroke-width="2"/>
-            </svg>
+        <div class="step-text">
+            Levanta la tapa de arriba y coloca la hoja <strong>boca abajo</strong> (con lo escrito tocando el cristal), bien pegada a la <strong>esquina inferior derecha</strong> (abajo a la derecha).
         </div>
+        
+        <!-- Tu foto del DIN A4 en la esquina inferior derecha -->
+        <img src="foto_paso1.jpg" alt="Colocar papel esquina inferior derecha" class="step-img">
     </div>
 
     <!-- PASO 2 -->
     <div class="step-card">
-        <div class="step-number">2</div>
-        <div class="step-title">Elige el tipo de copia</div>
-        <div class="step-description">
-            Pulsa <strong>una sola vez</strong> el botón que necesites en el panel frontal de la máquina:
+        <div class="step-header">
+            <div class="step-number">2</div>
+            <div class="step-title">Encender la impresora</div>
+        </div>
+        <div class="step-text">
+            Pulsa el botón de encendido típico en el panel frontal para encender la máquina.
         </div>
         
-        <div class="btn-box">
-            <div class="btn-option bw">
-                <span class="btn-icon">📄</span>
-                <span class="btn-text">Botón de Folio Blanco<br><small style="font-weight:normal; color:#64748b;">Para fotocopia en Blanco y Negro</small></span>
-            </div>
-            <div class="btn-option color">
-                <span class="btn-icon">📑</span>
-                <span class="btn-text" style="color: #1e40af;">Botón de Folio Color<br><small style="font-weight:normal; color:#3b82f6;">Para fotocopia en Color</small></span>
-            </div>
+        <div class="icon-power-box">
+            <span class="icon-power">⏻</span>
+            <p style="font-size: 1.1rem; font-weight: bold; color: #1e40af;">Botón de encendido (Power)</p>
         </div>
     </div>
 
     <!-- PASO 3 -->
     <div class="step-card">
-        <div class="step-number">3</div>
-        <div class="step-title">¿Quieres más de 1 copia?</div>
-        <div class="step-description">
-            Si necesitas varias copias de la misma hoja, pulsa el botón tantas veces como copias quieras.
-            <br><br>
-            <em>Ejemplo: Pulsa 3 veces seguidas para sacar 3 copias.</em>
+        <div class="step-header">
+            <div class="step-number">3</div>
+            <div class="step-title">Seleccionar "Copia"</div>
+        </div>
+        <div class="step-text">
+            Al encenderse, la pantalla se pondrá por defecto en la opción <strong>"Copia"</strong>. Pulsa el botón <strong>OK</strong> para entrar.
+        </div>
+        
+        <!-- Tu foto de la pantalla en 'Copia' -->
+        <img src="foto_paso3_pantalla.jpg" alt="Pantalla en opción copia" class="step-img">
+        
+        <!-- Tu foto pulsando el botón OK -->
+        <img src="foto_paso3_ok.jpg" alt="Boton OK" class="step-img">
+    </div>
+
+    <!-- PASO 4 -->
+    <div class="step-card">
+        <div class="step-header">
+            <div class="step-number">4</div>
+            <div class="step-title">Ajustar y hacer la fotocopia</div>
+        </div>
+        <div class="step-text">
+            En esta pantalla puedes elegir lo que necesites:
+            <ul style="margin: 10px 0 10px 22px; line-height: 1.6;">
+                <li>Con las <strong>flechas ◄ ► ▲ ▼</strong> selecciona cuántas copias quieres.</li>
+                <li>Elige si la quieres en <strong>Color</strong> o <strong>Blanco y Negro</strong>.</li>
+            </ul>
+            Cuando esté listo, pulsa el <strong>botón de copiar</strong>.
+        </div>
+        
+        <!-- Tu foto de la pantalla con las opciones -->
+        <img src="foto_paso4_pantalla.jpg" alt="Pantalla con opciones de copias" class="step-img">
+        
+        <!-- Tu foto del botón de copiar -->
+        <img src="foto_paso4_boton.jpg" alt="Boton de copiar" class="step-img">
+
+        <div class="tip-box">
+            💡 <strong>¡Y listo!</strong> Solo hay que esperar unos segundos a que la impresora saqué los folios por delante.
         </div>
     </div>
-
-    <!-- BOTÓN DE EMERGENCIA -->
-    <div class="alert-box">
-        <strong>🔴 ¿Te has equivocado?</strong><br>
-        Pulsa el botón rojo de la derecha (el que tiene un triángulo o cruz) para parar la impresora en cualquier momento.
-    </div>
-
-    <footer>
-        <p>Hecho con ❤️ para la familia</p>
-    </footer>
 
 </body>
 </html>
